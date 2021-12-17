@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursew.HelloController">
+   <children>
+      <ImageView fitHeight="501.0" fitWidth="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../shop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="443.0" fitWidth="588.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../store.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="87.0" prefHeight="303.0" prefWidth="406.0">
+         <children>
+            <TabPane fx:id="categorytable" layoutY="26.0" prefHeight="470.0" prefWidth="588.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Add">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="588.0">
+                           <children>
+                              <VBox layoutX="6.0" prefHeight="279.0" prefWidth="314.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <HBox prefHeight="43.0" prefWidth="314.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="207.0" style="-fx-background-color: #E4CDA7;" text="ID" textFill="#1e0101">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="category_ID" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="20.0" />
+                                             </HBox.margin></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="314.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="210.0" style="-fx-background-color: E4CDA7;" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="category_Name" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: C3B091;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="314.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: E4CDA7;" text="Count">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="category_Count" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: C3B091;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="314.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: E4CDA7;" text="Description">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="category_Description" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: C3B091;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin></TextField>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="Add_category" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Add_category" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: C3B091;" text="Add">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="120.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="View &amp; Edit">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="588.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="588.0">
+                                 <children>
+                                    <Label layoutX="192.0" layoutY="72.0" textFill="#e5dede" />
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="category_table" prefHeight="202.0" prefWidth="588.0">
+                                <columns>
+                                  <TableColumn fx:id="C_ID_column" prefWidth="88.0" text="ID" />
+                                  <TableColumn fx:id="C_Name_column" prefWidth="87.0" text="Name" />
+                                    <TableColumn fx:id="C_count_Column" prefWidth="73.0" text="Count" />
+                                    <TableColumn fx:id="C_Description_column" prefWidth="338.0" text="Description" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="view" layoutY="200.0" mnemonicParsing="false" onAction="#view_tabledata" prefHeight="41.0" prefWidth="588.0" text="View" />
+                              <Button fx:id="edit" layoutX="242.0" layoutY="401.0" mnemonicParsing="false" onAction="#Editfields" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #E4CDA7;" text="Edit" />
+                              <VBox layoutX="14.0" layoutY="259.0" prefHeight="138.0" prefWidth="122.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <HBox prefHeight="33.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #E4CDA7;" text="Edit ID">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="40.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="old" />
+                                          <TextField fx:id="oldfield" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="new" />
+                                          <TextField fx:id="newfield" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="139.0" layoutY="259.0" prefHeight="138.0" prefWidth="136.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <HBox prefHeight="33.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #E4CDA7;" text="Edit Name">
+                                             <padding>
+                                                <Insets left="40.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children></HBox>
+                                    <HBox prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="old" />
+                                          <TextField fx:id="oldfield1" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="new" />
+                                          <TextField fx:id="newfield1" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="283.0" layoutY="259.0" prefHeight="138.0" prefWidth="121.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <HBox prefHeight="33.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #E4CDA7;" text="Edit Count">
+                                             <padding>
+                                                <Insets left="40.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="old" />
+                                          <TextField fx:id="oldfield2" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="new" />
+                                          <TextField fx:id="newfield2" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="414.0" layoutY="259.0" prefHeight="138.0" prefWidth="150.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <HBox prefHeight="33.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="29.0" prefWidth="148.0" style="-fx-background-color: #E4CDA7;" text="Edit Description">
+                                             <padding>
+                                                <Insets left="40.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="old" />
+                                          <TextField fx:id="oldfield3" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefHeight="35.0" prefWidth="121.0">
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="88.0" style="-fx-background-color: #E4CDA7;" text="new" />
+                                          <TextField fx:id="newfield3" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #E4CDA7;">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Delete">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane prefHeight="279.0" prefWidth="314.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Using ID">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <Label layoutX="1.0" layoutY="35.0" prefHeight="41.0" prefWidth="314.0" style="-fx-background-color: #E4CDA7;" text="Please Enter ID to delete" textFill="#0d0d0d" />
+                                                <Label layoutX="1.0" layoutY="121.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #E4CDA7;" text="ID">
+                                                   <padding>
+                                                      <Insets left="40.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="deleteUsingID" layoutX="111.0" layoutY="119.0" prefHeight="42.0" prefWidth="209.0" style="-fx-background-color: C3B091;" />
+                                                <Button fx:id="deleteUsingIDbtn" layoutX="228.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteUsingID" style="-fx-background-color: C3B091;" text="Delete" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Using Name">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="1.0" layoutY="35.0" prefHeight="41.0" prefWidth="314.0" style="-fx-background-color: #E4CDA7;" text="Please Enter the Name to delete" textFill="#0d0d0d" />
+                                                <Label layoutX="1.0" layoutY="121.0" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #E4CDA7;" text="Name">
+                                                   <padding>
+                                                      <Insets left="40.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField fx:id="deleteUsingName" layoutX="111.0" layoutY="119.0" prefHeight="42.0" prefWidth="209.0" style="-fx-background-color: C3B091;" />
+                                                <Button fx:id="deleteUsingNamebtn1" layoutX="228.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteUsingName" style="-fx-background-color: C3B091;" text="Delete" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+      <Label layoutX="33.0" layoutY="14.0" prefHeight="27.0" prefWidth="98.0" style="-fx-border-color: white;" text="Categories" textFill="#f9f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="600.0" style="-fx-background-color: #E4CDA7;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursew.HelloController">
+   <children>
+      <Label fx:id="error" layoutX="108.0" layoutY="563.0" prefHeight="48.0" prefWidth="386.0" />
+      <ImageView fitHeight="472.0" fitWidth="600.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../shop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="466.0" fitWidth="600.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../store.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="402.0" layoutY="165.0" prefHeight="188.0" prefWidth="169.0" style="-fx-border-color: BLACK;">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="167.0">
+               <children>
+                  <TextField fx:id="username" prefHeight="25.0" prefWidth="166.0" promptText="Enter your username" />
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="11.0" prefHeight="64.0" prefWidth="167.0">
+               <children>
+                  <PasswordField fx:id="password" prefHeight="25.0" prefWidth="167.0" promptText="Enter your password" />
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="111.0" prefHeight="70.0" prefWidth="167.0">
+               <children>
+                  <Button fx:id="loginbtn" mnemonicParsing="false" onAction="#login_page" prefHeight="28.0" prefWidth="167.0" text="Login" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

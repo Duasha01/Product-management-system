@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="308.0" prefWidth="603.0" style="-fx-background-color: #009DAE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursew.HelloController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../new.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="385.0" prefHeight="309.0" prefWidth="218.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button onAction="#close_stage" fx:id="closebtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: #71DFE7;" text="Close" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Login_again" prefHeight="39.0" prefWidth="226.0" style="-fx-background-color: #71DFE7;" text="Login again" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

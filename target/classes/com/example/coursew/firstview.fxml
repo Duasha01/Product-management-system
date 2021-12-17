@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="600.0" style="-fx-background-color: #71DFE7;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursew.HelloController">
+   <children>
+      <ImageView fitHeight="487.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../shop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="456.0" fitWidth="600.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ss.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="386.0" layoutY="144.0" prefHeight="270.0" prefWidth="180.0" style="-fx-border-color: black;">
+         <children>
+            <HBox prefHeight="59.0" prefWidth="177.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="42.0" prefWidth="178.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="11.0" prefHeight="56.0" prefWidth="177.0">
+               <children>
+                  <Button fx:id="categories" mnemonicParsing="false" onAction="#loadcategory" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #009DAE;" text="Categories" />
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="111.0" prefHeight="57.0" prefWidth="177.0">
+               <children>
+                  <Button fx:id="products" mnemonicParsing="false" onAction="#products" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #009DAE;" text="Products &amp; Stocks" />
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="211.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="logoutbtn" mnemonicParsing="false" onAction="#Logout" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: #009DAE;" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

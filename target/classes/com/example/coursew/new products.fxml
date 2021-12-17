@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="662.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursew.HelloController">
+   <children>
+      <ImageView fitHeight="554.0" fitWidth="711.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../shop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="536.0" fitWidth="711.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../store.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="137.0" prefHeight="533.0" prefWidth="711.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="23.0" layoutY="14.0" prefHeight="423.0" prefWidth="375.0" style="-fx-border-color: black;">
+                           <children>
+                              <HBox prefHeight="71.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="43.0" prefWidth="144.0" style="-fx-background-color: #E4CDA7;" text="ID">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="product_ID" prefHeight="44.0" prefWidth="232.0" style="-fx-background-color: #E4CDA7;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="43.0" prefWidth="144.0" style="-fx-background-color: #E4CDA7;" text="Category_ID">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="P_Category_ID" prefHeight="44.0" prefWidth="232.0" style="-fx-background-color: #E4CDA7;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="81.0" prefHeight="71.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="43.0" prefWidth="144.0" style="-fx-background-color: #E4CDA7;" text="Name">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="product_Name" prefHeight="44.0" prefWidth="232.0" style="-fx-background-color: #E4CDA7;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="152.0" prefHeight="71.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="43.0" prefWidth="144.0" style="-fx-background-color: #E4CDA7;" text="Count">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="product_Count" prefHeight="44.0" prefWidth="232.0" style="-fx-background-color: #E4CDA7;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="152.0" prefHeight="71.0" prefWidth="375.0">
+                                 <children>
+                                    <Label prefHeight="43.0" prefWidth="144.0" style="-fx-background-color: #E4CDA7;" text="Description">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="product_Description" prefHeight="44.0" prefWidth="232.0" style="-fx-background-color: #E4CDA7;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="60.0" prefWidth="373.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#add_product" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: E4CDA7;" text="Add">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clear_product" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: E4CDA7;" text="Clear">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Edit">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="View">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="product_table" prefHeight="301.0" prefWidth="711.0">
+                          <columns>
+                            <TableColumn fx:id="P_ID_column" prefWidth="92.0" text="ID" />
+                            <TableColumn fx:id="P_CID_column" prefWidth="92.0" text="C_ID" />
+                              <TableColumn fx:id="P_Name_column" prefWidth="125.0" text="Name" />
+                              <TableColumn fx:id="P_Count_column" prefWidth="112.0" text="Count" />
+                              <TableColumn fx:id="P_description_column" minWidth="4.0" prefWidth="289.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="-1.0" layoutY="301.0" mnemonicParsing="false" onAction="#viewProduct" prefHeight="39.0" prefWidth="711.0" text="View" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Search">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Delete">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="8.0" prefHeight="373.0" prefWidth="393.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Using Name">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="343.0">
+                                       <children>
+                                          <Label layoutY="36.0" prefHeight="56.0" prefWidth="393.0" style="-fx-background-color: #E4CDA7;" text="Please Enter the Name to delete">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="7.0" layoutY="117.0" prefHeight="47.0" prefWidth="90.0" style="-fx-background-color: #E4CDA7;" text="Name">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="deleteProductNametxt" layoutX="124.0" layoutY="118.0" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: #E4CDA7;" />
+                                          <Button layoutX="197.0" layoutY="235.0" mnemonicParsing="false" onAction="#deleteProductName" style="-fx-background-color: #E4CDA7;" text="Delete" />
+                                          <Button layoutX="314.0" layoutY="235.0" mnemonicParsing="false" onAction="#clearname" style="-fx-background-color: #E4CDA7;" text="Clear" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Using ID">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutY="44.0" prefHeight="56.0" prefWidth="393.0" style="-fx-background-color: #E4CDA7;" text="Please Enter the ID to delete">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutY="150.0" prefHeight="47.0" prefWidth="90.0" style="-fx-background-color: #E4CDA7;" text="ID">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="deleteProductID" layoutX="124.0" layoutY="150.0" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: #E4CDA7;" />
+                                          <Button layoutX="315.0" layoutY="251.0" mnemonicParsing="false" onAction="#clearid" style="-fx-background-color: #E4CDA7;" text="Clear" />
+                                          <Button layoutX="226.0" layoutY="251.0" mnemonicParsing="false" onAction="#deleteProductID" style="-fx-background-color: #E4CDA7;" text="Delete" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="40.0" layoutY="14.0" prefHeight="37.0" prefWidth="139.0" style="-fx-border-color: white;" text="Products" textFill="#dddddd">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>
